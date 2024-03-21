@@ -11,11 +11,7 @@ func (hel *helloService) GetName(parameter1 string, parameter2 string) (string, 
 
 	helloRepository := NewHelloRepository()
 
-	name, error := helloRepository.GetName(parameter1, parameter2)
-
-	if error != nil {
-		return "", error
-	}
+	name, _ := helloRepository.GetName(parameter1, parameter2)
 
 	return name, nil
 }
